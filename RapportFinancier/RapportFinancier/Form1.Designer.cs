@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             buttonGenerate = new Button();
+            labelCompanyName = new Label();
+            textBoxCompanyName = new TextBox();
             SuspendLayout();
             // 
             // buttonGenerate
@@ -39,21 +41,42 @@
             buttonGenerate.TabIndex = 0;
             buttonGenerate.Text = "Generate";
             buttonGenerate.UseVisualStyleBackColor = true;
+            buttonGenerate.Click += buttonGenerate_Click;
+            // 
+            // labelCompanyName
+            // 
+            labelCompanyName.AutoSize = true;
+            labelCompanyName.Location = new Point(16, 17);
+            labelCompanyName.Name = "labelCompanyName";
+            labelCompanyName.Size = new Size(131, 15);
+            labelCompanyName.TabIndex = 1;
+            labelCompanyName.Text = "Nom de la compagnie :";
+            // 
+            // textBoxCompanyName
+            // 
+            textBoxCompanyName.Location = new Point(148, 14);
+            textBoxCompanyName.Name = "textBoxCompanyName";
+            textBoxCompanyName.Size = new Size(282, 23);
+            textBoxCompanyName.TabIndex = 2;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(442, 247);
+            Controls.Add(textBoxCompanyName);
+            Controls.Add(labelCompanyName);
             Controls.Add(buttonGenerate);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button buttonGenerate;
+        private Label labelCompanyName;
+        private TextBox textBoxCompanyName;
     }
 }
