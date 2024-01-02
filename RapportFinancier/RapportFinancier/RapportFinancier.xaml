@@ -1,0 +1,33 @@
+﻿<Window x:Name="Header" x:Class="RapportFinancier.RappotFinancier"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RapportFinancier"
+        mc:Ignorable="d"
+        Closing="RapportFinancier_Closing"
+        Title="RapportFinancier" Height="500" Width="850" ResizeMode="CanMinimize" FontFamily="Calibri" Icon="/aslen.png" FontSize="14">
+    <Grid x:Name="RapportFinancier" Background="#FFF8F8F8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <GroupBox x:Name="grpBoxInformations" Header="Informations" Margin="0,0,387,10" FontWeight="Bold" Grid.RowSpan="2">
+            <Canvas x:Name="canvaInformations">
+                <Label x:Name="labelCompanyName" Content="Nom de la compagnie :" Canvas.Left="10" Canvas.Top="10" FontWeight="Normal"/>
+                <TextBox x:Name="textBoxCompanyName" Canvas.Left="186" TextWrapping="Wrap" Canvas.Top="14" Width="248" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Normal"/>
+                <TextBox x:Name="textBoxAutorisedSignatory" Canvas.Left="186" TextWrapping="Wrap" Canvas.Top="38" Width="248" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Normal"/>
+                <Label x:Name="labelAutorisedSignatory" Content="Nom du signataire autorisé :" Canvas.Left="10" Canvas.Top="34" RenderTransformOrigin="0.575,-0.229" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            </Canvas>
+        </GroupBox>
+        <GroupBox x:Name="grpBoxIdenficiation" Header="Identification" Margin="468,0,10,247" FontWeight="Bold" Grid.RowSpan="2">
+            <Canvas x:Name="canvaIdenficiation" Height="213">
+                <Label x:Name="labelAccountantName" Content="Nom du comptable :" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="10" VerticalAlignment="Top" FontWeight="Normal"/>
+                <Label x:Name="labelTodayDate" Content="Date d'aujourd'hui :" Canvas.Left="10" Canvas.Top="35" FontWeight="Normal"/>
+                <TextBox x:Name="textBoxAccountantName" Canvas.Left="136" TextWrapping="Wrap" Canvas.Top="14" Width="214" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Normal"/>
+                <TextBox x:Name="textBoxTodayDate" Canvas.Left="136" TextWrapping="Wrap" Canvas.Top="39" Width="214" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Normal" IsEnabled="False"/>
+                <Button x:Name="buttonGenerate" Content="Générer" HorizontalAlignment="Left" Canvas.Left="250" Canvas.Top="63" VerticalAlignment="Top" Height="32" Width="100" Click="buttonGenerate_Click"/>
+            </Canvas>
+        </GroupBox>
+    </Grid>
+</Window>

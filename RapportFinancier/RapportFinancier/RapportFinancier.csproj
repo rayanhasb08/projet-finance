@@ -4,21 +4,16 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Ressources\**" />
-    <EmbeddedResource Remove="Ressources\**" />
-    <None Remove="Ressources\**" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <None Remove="aslen.png" />
+    <None Remove="Fonts\Roboto-Bold.ttf" />
+    <None Remove="Fonts\Roboto-BoldItalic.ttf" />
     <None Remove="Fonts\Roboto-LightItalic.ttf" />
-    <None Remove="Roboto-Bold.ttf" />
-    <None Remove="Roboto-BoldItalic.ttf" />
-    <None Remove="Roboto-Regular.ttf" />
+    <None Remove="Fonts\Roboto-Regular.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,7 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="PDFsharp" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="aslen.png" />
   </ItemGroup>
 
 </Project>
